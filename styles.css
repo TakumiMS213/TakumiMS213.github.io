@@ -324,20 +324,23 @@ h3 {
 .section::before {
   content: "";
   position: absolute;
-  left: -1rem;
-  top: clamp(4rem, 9vw, 7rem);
-  width: 4rem;
-  height: 0.5rem;
-  background: linear-gradient(90deg, var(--green-800), var(--gray-500));
+  left: 0;
+  top: clamp(2.5rem, 6vw, 4.75rem);
+  width: clamp(4rem, 12vw, 8.5rem);
+  height: 0.42rem;
+  background: linear-gradient(90deg, rgba(11, 55, 43, 0.9), rgba(114, 124, 120, 0.42));
   transform: skewX(-24deg);
 }
 
 .section-heading {
+  position: relative;
+  z-index: 1;
   margin-bottom: 2rem;
+  padding-top: 1.35rem;
 }
 
 .section-heading .eyebrow {
-  color: var(--green-700);
+  color: var(--gray-700);
 }
 
 .about-grid {

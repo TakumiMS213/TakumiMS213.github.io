@@ -19,10 +19,10 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y poppler-utils webp
       - name: Download official TGS2026 PDF map
         run: curl -L --fail --retry 4 --retry-delay 3 -o /tmp/tgs2026-map.pdf "https://service.tgs.cesa.or.jp/files/96/tgs2026/map/2026TGS_MAP.pdf"
-      - name: Render mobile map asset
+      - name: Render high-resolution mobile map asset
         run: |
-          pdftoppm -f 1 -singlefile -png -r 150 /tmp/tgs2026-map.pdf /tmp/tgs2026-map
-          cwebp -quiet -q 60 -resize 3600 0 /tmp/tgs2026-map.png -o tgs2026/map.webp
+          pdftoppm -f 1 -singlefile -png -r 220 /tmp/tgs2026-map.pdf /tmp/tgs2026-map
+          cwebp -quiet -q 68 -m 6 -sharp_yuv -resize 6000 0 /tmp/tgs2026-map.png -o tgs2026/map.webp
       - name: Commit generated map
         run: |
           git config user.name "github-actions[bot]"

@@ -1,0 +1,12 @@
+{
+  "name":"TGS2026 Search Map",
+  "short_name":"TGS26 Map",
+  "description":"TGS2026 venue map with offline title, booth and conditional search",
+  "start_url":"./",
+  "scope":"./",
+  "display":"standalone",
+  "background_color":"#09090b",
+  "theme_color":"#09090b",
+  "orientation":"any",
+  "icons":[{"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]
+}

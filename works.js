@@ -23,7 +23,7 @@
 window.WORKS = [
   {
     type: "Website",
-    title: "Portfolio Site",
+    title: "ポートフォリオサイト",
     description: "このリポジトリで公開している自己紹介サイトです。GitHub Pages で軽く運用できます。",
     url: "https://github.com/TakumiMS213/TakumiMS213.github.io",
     linkText: "Repository",

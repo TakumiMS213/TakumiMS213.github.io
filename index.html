@@ -105,23 +105,11 @@
           <p class="eyebrow">Works</p>
           <h2 id="works-title">制作物</h2>
         </div>
-        <div class="work-list">
-          <article class="work-item">
-            <div>
-              <p class="work-kicker">Website</p>
-              <h3>Portfolio Site</h3>
-              <p>このリポジトリで公開している自己紹介サイトです。GitHub Pages で軽く運用できます。</p>
-            </div>
-            <a class="text-link" href="https://github.com/TakumiMS213/TakumiMS213.github.io" target="_blank" rel="noreferrer">Repository</a>
-          </article>
-          <article class="work-item muted">
-            <div>
-              <p class="work-kicker">Next</p>
-              <h3>Coming Soon</h3>
-              <p>今後の制作物をここに追加できます。タイトル、概要、URL を差し替えるだけで更新できます。</p>
-            </div>
-          </article>
-        </div>
+        <!--
+          Works の内容は works.js だけを編集すれば更新できます。
+          HTML 側に作品カードを直接追加する必要はありません。
+        -->
+        <div class="work-list" id="work-list"></div>
       </section>
 
       <section class="section contact-section" id="contact" aria-labelledby="contact-title">
@@ -140,6 +128,7 @@
       <small>&copy; <span id="year"></span> TakumiMS213</small>
     </footer>
 
+    <script src="works.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

@@ -10,6 +10,7 @@
  * {
  *   type: "種別",
  *   title: "作品名",
+ *   slug: "example",
  *   description: "作品の説明",
  *   icon: "assets/works/example/icon.png",
  *   iconAlt: "作品アイコンの説明",
@@ -18,6 +19,21 @@
  *   muted: false,
  *   media: []
  * },
+ *
+ * ---------------------------------------------------------
+ * slug と詳細記事
+ * ---------------------------------------------------------
+ *
+ * slug: "gearcraft",
+ *
+ * Worksのカードをクリックすると
+ * work.html?id=gearcraft
+ * に移動し、works/gearcraft.md を記事として読み込みます。
+ *
+ * 新しい作品を追加するときは:
+ * 1. slug を決める
+ * 2. works/slug.md を作る
+ * これだけで詳細ページを追加できます。
  *
  * ---------------------------------------------------------
  * 作品アイコンを入れる
@@ -101,6 +117,7 @@ window.WORKS = [
   {
     type: "Website",
     title: "ポートフォリオサイト",
+    slug: "portfolio-site",
     description: "このリポジトリで公開している自己紹介サイトです。GitHub Pages で軽く運用できます。",
     icon: "",
     iconAlt: "",
@@ -112,6 +129,7 @@ window.WORKS = [
   {
     type: "Game",
     title: "GearCraft",
+    slug: "gearcraft",
     description: "スチームパンク×タワーディフェンス×ローグライクのゲームです。Unity で制作しました。",
     icon: "",
     iconAlt: "",
@@ -123,6 +141,7 @@ window.WORKS = [
   {
     type: "Game",
     title: "LostNine",
+    slug: "lostnine",
     description: "「遺失物」をテーマにしたADVゲームです。Unity で制作しました。",
     icon: "",
     iconAlt: "",
@@ -134,6 +153,7 @@ window.WORKS = [
   {
     type: "Game",
     title: "Word Cascade Shooter",
+    slug: "word-cascade-shooter",
     description: "文字の滝の中から、お題に合う文字を打ち抜くシューティンクゲームです。Unity で制作しました。",
     icon: "",
     iconAlt: "",
@@ -145,6 +165,7 @@ window.WORKS = [
   {
     type: "Game",
     title: "RE:COLOR",
+    slug: "recolor",
     description: "CAのプロトスプリントリーグで作成した、色をテーマにしたシューティングパズルゲームです。Unity で制作しました。",
     icon: "",
     iconAlt: "",

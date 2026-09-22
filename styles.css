@@ -440,7 +440,18 @@ h3 {
 }
 
 .work-copy {
+  flex: 1 1 auto;
   min-width: 0;
+}
+
+.work-icon {
+  flex: 0 0 auto;
+  width: clamp(64px, 8vw, 88px);
+  height: clamp(64px, 8vw, 88px);
+  border: 1px solid var(--line);
+  background: var(--gray-150);
+  object-fit: cover;
+  box-shadow: 5px 5px 0 rgba(6, 38, 29, 0.1);
 }
 
 .work-media-grid {

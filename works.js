@@ -11,11 +11,23 @@
  *   type: "種別",
  *   title: "作品名",
  *   description: "作品の説明",
+ *   icon: "assets/works/example/icon.png",
+ *   iconAlt: "作品アイコンの説明",
  *   url: "リンク先URL",
  *   linkText: "リンクに表示する文字",
  *   muted: false,
  *   media: []
  * },
+ *
+ * ---------------------------------------------------------
+ * 作品アイコンを入れる
+ * ---------------------------------------------------------
+ *
+ * icon: "assets/works/example/icon.png",
+ * iconAlt: "作品アイコンの説明",
+ *
+ * ・icon を空文字 "" にするとアイコンは表示されません。
+ * ・PNG / JPG / WebP など通常の画像が使えます。
  *
  * ---------------------------------------------------------
  * 画像を入れる
@@ -72,6 +84,7 @@
  *   { type: "video", src: "movie.mp4" }
  * ]
  *
+ * ・icon を空文字 "" にすると作品アイコンは表示されません。
  * ・url を空文字 "" にすると作品リンクは表示されません。
  * ・caption は不要なら省略できます。
  * ・media 自体が不要なら [] のままでOKです。
@@ -89,6 +102,8 @@ window.WORKS = [
     type: "Website",
     title: "ポートフォリオサイト",
     description: "このリポジトリで公開している自己紹介サイトです。GitHub Pages で軽く運用できます。",
+    icon: "",
+    iconAlt: "",
     url: "https://github.com/TakumiMS213/TakumiMS213.github.io",
     linkText: "Repository",
     muted: false,
@@ -98,6 +113,8 @@ window.WORKS = [
     type: "Game",
     title: "GearCraft",
     description: "スチームパンク×タワーディフェンス×ローグライクのゲームです。Unity で制作しました。",
+    icon: "",
+    iconAlt: "",
     url: "",
     linkText: "",
     muted: true,
@@ -107,6 +124,8 @@ window.WORKS = [
     type: "Game",
     title: "LostNine",
     description: "「遺失物」をテーマにしたADVゲームです。Unity で制作しました。",
+    icon: "",
+    iconAlt: "",
     url: "",
     linkText: "",
     muted: true,
@@ -116,6 +135,8 @@ window.WORKS = [
     type: "Game",
     title: "Word Cascade Shooter",
     description: "文字の滝の中から、お題に合う文字を打ち抜くシューティンクゲームです。Unity で制作しました。",
+    icon: "",
+    iconAlt: "",
     url: "",
     linkText: "",
     muted: true,
@@ -125,6 +146,8 @@ window.WORKS = [
     type: "Game",
     title: "RE:COLOR",
     description: "CAのプロトスプリントリーグで作成した、色をテーマにしたシューティングパズルゲームです。Unity で制作しました。",
+    icon: "",
+    iconAlt: "",
     url: "",
     linkText: "",
     muted: true,

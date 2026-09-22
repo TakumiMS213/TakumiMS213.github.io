@@ -106,6 +106,15 @@ function renderWorks() {
     const main = document.createElement("div");
     main.className = "work-main";
 
+    if (work.icon) {
+      const icon = document.createElement("img");
+      icon.className = "work-icon";
+      icon.src = work.icon;
+      icon.alt = work.iconAlt || `${work.title} のアイコン`;
+      icon.loading = "lazy";
+      main.append(icon);
+    }
+
     const body = document.createElement("div");
     body.className = "work-copy";
 

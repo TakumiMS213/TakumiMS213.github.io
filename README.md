@@ -1,6 +1,6 @@
-# TakumiMS213 Portfolio
+# Takumi Portfolio
 
-TakumiMS213 のポートフォリオサイトです。
+Takumi のポートフォリオサイトです。
 
 ## 構成
 

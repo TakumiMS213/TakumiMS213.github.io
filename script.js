@@ -141,6 +141,35 @@ function renderWorks() {
       main.append(link);
     }
 
+    if (work.slug) {
+      const detailUrl = `work.html?id=${encodeURIComponent(work.slug)}`;
+      article.classList.add("is-clickable");
+      article.tabIndex = 0;
+      article.setAttribute("role", "link");
+      article.setAttribute("aria-label", `${work.title} の詳細を見る`);
+
+      article.addEventListener("click", (event) => {
+        if (event.target.closest("a, button, video, iframe")) {
+          return;
+        }
+
+        window.location.href = detailUrl;
+      });
+
+      article.addEventListener("keydown", (event) => {
+        if (event.key !== "Enter" && event.key !== " ") {
+          return;
+        }
+
+        if (event.target.closest("a, button")) {
+          return;
+        }
+
+        event.preventDefault();
+        window.location.href = detailUrl;
+      });
+    }
+
     article.append(main);
 
     if (Array.isArray(work.media) && work.media.length > 0) {

@@ -6,12 +6,103 @@ if (year) {
 
 const workList = document.querySelector("#work-list");
 
+function getYouTubeEmbedUrl(url) {
+  try {
+    const parsed = new URL(url);
+
+    if (parsed.hostname === "youtu.be") {
+      return `https://www.youtube.com/embed/${parsed.pathname.slice(1)}`;
+    }
+
+    if (parsed.hostname.includes("youtube.com")) {
+      if (parsed.pathname.startsWith("/embed/")) {
+        return parsed.href;
+      }
+
+      const videoId = parsed.searchParams.get("v");
+      if (videoId) {
+        return `https://www.youtube.com/embed/${videoId}`;
+      }
+    }
+  } catch {
+    return "";
+  }
+
+  return "";
+}
+
+function createWorkMedia(media) {
+  if (!media || !media.src) {
+    return null;
+  }
+
+  const figure = document.createElement("figure");
+  figure.className = "work-media-item";
+
+  let element = null;
+
+  if (media.type === "image") {
+    const image = document.createElement("img");
+    image.src = media.src;
+    image.alt = media.alt || "";
+    image.loading = "lazy";
+    element = image;
+  }
+
+  if (media.type === "video") {
+    const video = document.createElement("video");
+    video.src = media.src;
+    video.controls = true;
+    video.preload = "metadata";
+    video.playsInline = true;
+
+    if (media.poster) {
+      video.poster = media.poster;
+    }
+
+    element = video;
+  }
+
+  if (media.type === "youtube") {
+    const embedUrl = getYouTubeEmbedUrl(media.src);
+
+    if (embedUrl) {
+      const iframe = document.createElement("iframe");
+      iframe.src = embedUrl;
+      iframe.title = media.alt || "YouTube video";
+      iframe.loading = "lazy";
+      iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+      iframe.allowFullscreen = true;
+      element = iframe;
+    }
+  }
+
+  if (!element) {
+    return null;
+  }
+
+  element.classList.add("work-media");
+  figure.append(element);
+
+  if (media.caption) {
+    const caption = document.createElement("figcaption");
+    caption.textContent = media.caption;
+    figure.append(caption);
+  }
+
+  return figure;
+}
+
 if (workList && Array.isArray(window.WORKS)) {
   window.WORKS.forEach((work) => {
     const article = document.createElement("article");
     article.className = work.muted ? "work-item muted" : "work-item";
 
+    const main = document.createElement("div");
+    main.className = "work-main";
+
     const body = document.createElement("div");
+    body.className = "work-copy";
 
     const kicker = document.createElement("p");
     kicker.className = "work-kicker";
@@ -24,7 +115,7 @@ if (workList && Array.isArray(window.WORKS)) {
     description.textContent = work.description;
 
     body.append(kicker, title, description);
-    article.append(body);
+    main.append(body);
 
     if (work.url) {
       const link = document.createElement("a");
@@ -33,7 +124,26 @@ if (workList && Array.isArray(window.WORKS)) {
       link.target = "_blank";
       link.rel = "noreferrer";
       link.textContent = work.linkText || "View";
-      article.append(link);
+      main.append(link);
+    }
+
+    article.append(main);
+
+    if (Array.isArray(work.media) && work.media.length > 0) {
+      const mediaGrid = document.createElement("div");
+      mediaGrid.className = "work-media-grid";
+
+      work.media.forEach((media) => {
+        const mediaElement = createWorkMedia(media);
+
+        if (mediaElement) {
+          mediaGrid.append(mediaElement);
+        }
+      });
+
+      if (mediaGrid.children.length > 0) {
+        article.append(mediaGrid);
+      }
     }
 
     workList.append(article);

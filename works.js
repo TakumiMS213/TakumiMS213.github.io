@@ -95,9 +95,36 @@ window.WORKS = [
     media: []
   },
   {
-    type: "Next",
-    title: "Coming Soon",
-    description: "今後の制作物をここに追加できます。works.js の内容を書き換えるだけで更新できます。",
+    type: "Game",
+    title: "GearCraft",
+    description: "スチームパンク×タワーディフェンス×ローグライクのゲームです。Unity で制作しました。",
+    url: "",
+    linkText: "",
+    muted: true,
+    media: []
+  },
+  {
+    type: "Game",
+    title: "LostNine",
+    description: "「遺失物」をテーマにしたADVゲームです。Unity で制作しました。",
+    url: "",
+    linkText: "",
+    muted: true,
+    media: []
+  },
+  {
+    type: "Game",
+    title: "Word Cascade Shooter",
+    description: "文字の滝の中から、お題に合う文字を打ち抜くシューティンクゲームです。Unity で制作しました。",
+    url: "",
+    linkText: "",
+    muted: true,
+    media: []
+  },
+  {
+    type: "Game",
+    title: "RE:COLOR",
+    description: "CAのプロトスプリントリーグで作成した、色をテーマにしたシューティングパズルゲームです。Unity で制作しました。",
     url: "",
     linkText: "",
     muted: true,

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="TakumiMS213 の制作物詳細ページです。">
+    <title>Work | TakumiMS213 Portfolio</title>
+    <link rel="icon" href="https://github.com/TakumiMS213.png">
+    <link rel="stylesheet" href="styles.css?v=20260922-detail-page">
+  </head>
+  <body>
+    <header class="site-header" aria-label="サイトヘッダー">
+      <a class="brand" href="index.html">TakumiMS213</a>
+      <nav class="nav-links" aria-label="主要ナビゲーション">
+        <a href="index.html#about">About</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#works">Works</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="detail-page">
+      <div class="detail-shell">
+        <a class="detail-back" href="index.html#works">← Works に戻る</a>
+
+        <article class="detail-article" id="detail-article" hidden>
+          <header class="detail-header">
+            <div class="detail-title-row">
+              <img class="detail-icon" id="detail-icon" alt="" hidden>
+              <div class="detail-meta">
+                <p class="detail-kicker" id="detail-type"></p>
+                <h1 class="detail-title" id="detail-title"></h1>
+                <p class="detail-description" id="detail-description"></p>
+                <div class="detail-actions" id="detail-actions"></div>
+              </div>
+            </div>
+          </header>
+
+          <div class="article-body" id="article-body"></div>
+        </article>
+
+        <div class="article-error" id="article-error">記事を読み込んでいます...</div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <small>&copy; <span id="year"></span> TakumiMS213</small>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="work.js?v=20260922-detail-page"></script>
+  </body>
+</html>

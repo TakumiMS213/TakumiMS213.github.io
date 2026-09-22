@@ -3,7 +3,9 @@
  * Works 編集用ファイル
  * =========================================================
  *
- * 作品を追加したい場合は、下の WORKS に同じ形式で項目を追加してください。
+ * 作品の追加・修正は、基本的にこのファイルだけで行えます。
+ *
+ * 基本形:
  *
  * {
  *   type: "種別",
@@ -11,13 +13,75 @@
  *   description: "作品の説明",
  *   url: "リンク先URL",
  *   linkText: "リンクに表示する文字",
- *   muted: false
+ *   muted: false,
+ *   media: []
  * },
  *
- * ・url を空文字 "" にするとリンクは表示されません。
- * ・linkText は url がある場合だけ使われます。
+ * ---------------------------------------------------------
+ * 画像を入れる
+ * ---------------------------------------------------------
+ *
+ * media: [
+ *   {
+ *     type: "image",
+ *     src: "assets/works/example/image01.jpg",
+ *     alt: "画像の説明",
+ *     caption: "任意のキャプション"
+ *   }
+ * ]
+ *
+ * ---------------------------------------------------------
+ * MP4などの動画を入れる
+ * ---------------------------------------------------------
+ *
+ * media: [
+ *   {
+ *     type: "video",
+ *     src: "assets/works/example/movie.mp4",
+ *     poster: "assets/works/example/thumbnail.jpg",
+ *     caption: "プレイ動画"
+ *   }
+ * ]
+ *
+ * poster は省略可能です。
+ *
+ * ---------------------------------------------------------
+ * YouTubeを入れる
+ * ---------------------------------------------------------
+ *
+ * media: [
+ *   {
+ *     type: "youtube",
+ *     src: "https://www.youtube.com/watch?v=XXXXXXXXXXX",
+ *     alt: "動画タイトル",
+ *     caption: "紹介動画"
+ *   }
+ * ]
+ *
+ * 通常の YouTube URL / youtu.be URL のどちらでも使えます。
+ *
+ * ---------------------------------------------------------
+ * 複数の画像・動画を並べる
+ * ---------------------------------------------------------
+ *
+ * media の中に続けて書くだけです。
+ *
+ * media: [
+ *   { type: "image", src: "image01.jpg", alt: "画面1" },
+ *   { type: "image", src: "image02.jpg", alt: "画面2" },
+ *   { type: "video", src: "movie.mp4" }
+ * ]
+ *
+ * ・url を空文字 "" にすると作品リンクは表示されません。
+ * ・caption は不要なら省略できます。
+ * ・media 自体が不要なら [] のままでOKです。
  * ・muted: true にすると薄いデザインになります。
  * ・作品の並び順は、このファイルに書いた順番です。
+ *
+ * おすすめ:
+ * 画像や動画は
+ * assets/works/作品名/
+ * のように作品ごとのフォルダへ置くと整理しやすいです。
  */
 
 window.WORKS = [
@@ -27,7 +91,8 @@ window.WORKS = [
     description: "このリポジトリで公開している自己紹介サイトです。GitHub Pages で軽く運用できます。",
     url: "https://github.com/TakumiMS213/TakumiMS213.github.io",
     linkText: "Repository",
-    muted: false
+    muted: false,
+    media: []
   },
   {
     type: "Next",
@@ -35,6 +100,7 @@ window.WORKS = [
     description: "今後の制作物をここに追加できます。works.js の内容を書き換えるだけで更新できます。",
     url: "",
     linkText: "",
-    muted: true
+    muted: true,
+    media: []
   }
 ];

@@ -28,7 +28,7 @@ function showError(message) {
 }
 
 function renderHeader(work) {
-  document.title = `${work.title} | TakumiMS213 Portfolio`;
+  document.title = `${work.title} | Takumi Portfolio`;
 
   detailType.textContent = work.type || "Work";
   detailTitle.textContent = work.title || "";

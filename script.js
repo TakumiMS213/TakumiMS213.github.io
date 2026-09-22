@@ -93,7 +93,12 @@ function createWorkMedia(media) {
   return figure;
 }
 
-if (workList && Array.isArray(window.WORKS)) {
+function renderWorks() {
+  if (!workList || !Array.isArray(window.WORKS)) {
+    return;
+  }
+
+  workList.replaceChildren();
   window.WORKS.forEach((work) => {
     const article = document.createElement("article");
     article.className = work.muted ? "work-item muted" : "work-item";
@@ -149,3 +154,13 @@ if (workList && Array.isArray(window.WORKS)) {
     workList.append(article);
   });
 }
+
+const worksScript = document.createElement("script");
+worksScript.src = `works.js?v=${Date.now()}`;
+worksScript.onload = renderWorks;
+worksScript.onerror = () => {
+  if (workList) {
+    workList.textContent = "Works の読み込みに失敗しました。ページを再読み込みしてください。";
+  }
+};
+document.head.append(worksScript);

@@ -169,8 +169,8 @@ window.WORKS = [
     description: "サイバーエージェントのプロトスプリントリーグで作成した、色をテーマにしたシューティングパズルゲームです。Unity で制作しました。",
     icon: "",
     iconAlt: "",
-    url: "",
-    linkText: "",
+    url: "https://unityroom.com/games/re_color",
+    linkText: "Unityroom",
     muted: true,
     media: []
   }

@@ -166,7 +166,7 @@ window.WORKS = [
     type: "Game",
     title: "RE:COLOR",
     slug: "recolor",
-    description: "CAのプロトスプリントリーグで作成した、色をテーマにしたシューティングパズルゲームです。Unity で制作しました。",
+    description: "サイバーエージェントのプロトスプリントリーグで作成した、色をテーマにしたシューティングパズルゲームです。Unity で制作しました。",
     icon: "",
     iconAlt: "",
     url: "",

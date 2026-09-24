@@ -157,9 +157,9 @@ window.WORKS = [
     description: "文字の滝の中から、お題に合う文字を打ち抜くシューティンクゲームです。Unity で制作しました。",
     icon: "",
     iconAlt: "",
-    url: "",
-    linkText: "",
-    muted: true,
+    url: "https://unityroom.com/games/wordcascadeshooter",
+    linkText: "Unityroom",
+    muted: false,
     media: []
   },
   {
@@ -171,7 +171,7 @@ window.WORKS = [
     iconAlt: "",
     url: "https://unityroom.com/games/re_color",
     linkText: "Unityroom",
-    muted: true,
+    muted: false,
     media: []
   }
 ];

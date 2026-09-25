@@ -118,7 +118,7 @@ window.WORKS = [
     type: "Website",
     title: "ポートフォリオサイト",
     slug: "portfolio-site",
-    description: "このリポジトリで公開している自己紹介サイトです。GitHub Pages で軽く運用できます。",
+    description: "このリポジトリで公開している自己紹介サイトです。GitHub Pages で運用しています。",
     icon: "Assets/Icons/IMG_1464.jpg",
     iconAlt: "",
     url: "https://github.com/TakumiMS213/TakumiMS213.github.io",
@@ -135,7 +135,7 @@ window.WORKS = [
     iconAlt: "",
     url: "",
     linkText: "",
-    muted: true,
+    muted: false,
     media: []
   },
   {
@@ -147,7 +147,7 @@ window.WORKS = [
     iconAlt: "",
     url: "",
     linkText: "",
-    muted: true,
+    muted: false,
     media: []
   },
   {
@@ -172,6 +172,18 @@ window.WORKS = [
     url: "https://unityroom.com/games/re_color",
     linkText: "Unityroom",
     muted: false,
+    media: []
+  },
+  {
+    type: "Application",
+    title: "TGS2026マップアプリ",
+    slug: "tgs2026-map-app",
+    description: "TGS2026のマップを表示するアプリケーションです。（現在は非公開）",
+    icon: "",
+    iconAlt: "",
+    url: "",
+    linkText: "",
+    muted: true,
     media: []
   }
 ];

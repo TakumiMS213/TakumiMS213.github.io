@@ -167,7 +167,7 @@ window.WORKS = [
     title: "RE:COLOR",
     slug: "recolor",
     description: "サイバーエージェントのプロトスプリントリーグで作成した、色をテーマにしたシューティングパズルゲームです。Unity で制作しました。",
-    icon: "Assets/Icons/REcolor_icon.png",
+    icon: "Assets/Icons/REcolor_icon_fullsize.png",
     iconAlt: "",
     url: "https://unityroom.com/games/re_color",
     linkText: "Unityroom",

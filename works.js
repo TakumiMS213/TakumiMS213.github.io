@@ -173,17 +173,5 @@ window.WORKS = [
     linkText: "Unityroom",
     muted: false,
     media: []
-  },
-  {
-    type: "Application",
-    title: "TGS2026マップアプリ",
-    slug: "tgs2026-map-app",
-    description: "TGS2026のマップを表示するアプリケーションです。（現在は非公開）",
-    icon: "",
-    iconAlt: "",
-    url: "",
-    linkText: "",
-    muted: true,
-    media: []
   }
 ];

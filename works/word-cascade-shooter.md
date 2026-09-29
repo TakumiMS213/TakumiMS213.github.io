@@ -1,31 +1,21 @@
 ## 概要
 
-文字の滝の中から、お題に合う文字を打ち抜くシューティングゲームです。Unityで制作しました。
+言葉の滝の中から、お題に合う言葉を打ち抜くシューティングゲームです。Unityで制作しました。[Unityroom](https://unityroom.com/games/wordcascadeshooter)
 
-## ゲーム内容
+## この作品について
 
-ここにルールや操作方法、ゲームの面白さなどを書けます。
+「Word Cascade」という言葉が滝のように流れてくるサイトを参考に、そこにシューティングの要素を加えたスコアアタック系のシューティングゲーム。
 
-## 制作について
-
-ここに制作期間、人数、自分の担当範囲などを書けます。
+画面上部に表示されたお題を見ながら、画面上の言葉の滝の中からそれに合う言葉をクリックで撃ち抜いていく。
 
 ## 工夫した点
 
-- ここにゲームアイデアについて書く
-- ここに操作感やテンポについて書く
-- ここに実装上の工夫を書く
+大量の言葉を管理するために、Unity Entities（ECS）で単語ごとの位置・速度・判定情報を管理し、Systemで落下と画面外判定をまとめて処理しながら、MonoBehaviour経由でTextMeshProの表示に同期しています。
 
-## スクリーンショット
+## 画像
 
-<!--
-![Word Cascade Shooterのゲーム画面](assets/works/word-cascade-shooter/screenshot01.png)
--->
+保留
 
 ## 動画
 
-<!--
-<video controls playsinline>
-  <source src="assets/works/word-cascade-shooter/gameplay.mp4" type="video/mp4">
-</video>
--->
+保留
